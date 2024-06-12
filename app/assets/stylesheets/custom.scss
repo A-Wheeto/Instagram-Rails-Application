@@ -1,0 +1,53 @@
+html {
+    height: 100vh;
+}
+
+body {
+    background-color: #fafafa;
+    height: 100%;
+}
+
+.home-section {
+    height: 100%;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.login-section {
+    margin: 0 auto;
+}
+
+.card-img-top {
+    max-width: 50%;
+    align-self: center;
+}
+
+.line-text {
+    padding: 0 .5rem;
+    font-size: small;
+    margin: 0;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: rgb(139, 137, 137);
+}
+
+.facebook {
+    max-width: 1rem;
+    height: auto;
+    margin-right: .5rem;
+}
+
+.card::-webkit-scrollbar {
+    width: 0;
+}
+
+.filepond--item {
+    width: calc(50% - 0.5em);
+}
+
+.filepond--root {
+    max-height: 20em;
+}

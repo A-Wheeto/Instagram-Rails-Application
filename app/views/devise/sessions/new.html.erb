@@ -1,0 +1,42 @@
+<div class="home-section">
+    <div class="card text-center login-section pt-4 mt-4" style="width: 23rem;">
+        <%= image_tag "Instagram-logo.png", class: "card-img-top" %>
+        <div class="card-body">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="mb-3 mt-4">
+            	<%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Phone number, username, or email" %>
+            </div>
+            <div class="mb-3">
+				<%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+            </div>
+			    <%= f.submit "Log in", class: "btn btn-primary w-100" %>
+            <% end %>
+
+            <div class="d-flex align-items-center mt-4">
+                <div class="line"></div>
+                <h2 class="line-text">OR</h2>
+                <div class="line"></div>
+            </div>
+
+            <a href="#" class="d-block mt-4 text-decoration-none fw-bold">
+                <%= image_tag("facebook-logo.png", class: "facebook") %>
+                Log in with Facebook
+            </a>
+
+            <% if notice %>
+                <p class="notice"><%= notice %></p>
+            <% elsif alert %>
+                <p class="alert"><%= alert %></p>
+            <% end %>
+
+            <a href="#" class="fs-6 d-block my-4 text-decoration-none">Forgotten Password?</a>
+        </div>
+    </div>   
+    
+    <div class="card text-center py-2 mt-3 login-section" style="width: 23rem;">
+        <div class="card-text">
+            Don't have an account?
+            <%= link_to "Sign up", new_user_registration_path %>
+        </div>
+    </div>
+</div>

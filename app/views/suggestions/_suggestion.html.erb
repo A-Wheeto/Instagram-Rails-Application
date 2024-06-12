@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-between my-1">
+    <div class="d-flex">
+        <%= image_tag "profile_image.png", class: "img-thumbnail rounded-circle p-0", style: "width: 3.5rem;" %>
+        <div class="d-flex flex-column mx-2 justify-content-center">
+            <small class="fw-bold" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 10rem;">Wheeto</small>
+            <small class="text-muted", style="font-size:.7em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 10rem;">Suggested for you</small>
+        </div>
+    </div>
+
+    <%= link_to root_path, style: "text-decoration: none;" do %>
+        <small class="fw-bold text-primary">Follow</small>
+    <% end %>
+</div>

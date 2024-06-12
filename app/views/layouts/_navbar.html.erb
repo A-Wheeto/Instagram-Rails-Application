@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top", style="border-color: #afafaf;">
+  <div class="container">
+    <%= link_to root_path, class: "navbar-brand" do %>
+        <%= image_tag "Instagram-logo.png", width: "100rem" %>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="d-flex">
+      <div class="collapse navbar-collapse me-5" id="navbarSupportedContent">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 border-0" type="search" placeholder="Search" aria-label="Search" style="background: #efefef;">
+        </form>
+      </div>
+
+      <div class="navbar-collapse gap-4">
+          <%= link_to root_path, class: "text-dark" do %>
+            <i class="fa-solid fa-house fa-xl"></i>
+          <% end %>
+          <i class="fa-brands fa-facebook-messenger fa-xl"></i>
+          <a type="button" class="text-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <i class="fa-regular fa-square-plus fa-xl"></i>
+          </a>            
+          <i class="fa-regular fa-compass fa-xl"></i>
+          <i class="fa-solid fa-heart fa-xl"></i>
+
+          <div class="dropdown">
+            <a class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <% if current_user && current_user.profile_pic.attached? %>
+                <%= image_tag current_user.user.profile_pic, class: "img-thumbnail rounded-circle p-0", style: "height: 24px; border: 0;" %>
+              <% else %>
+                <%= image_tag "profile_image.png", class: "img-thumbnail rounded-circle p-0", style: "height: 24px; border: 0;" %>
+              <% end %>
+            </a>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete %>
+              </li>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+<%= render "posts/form", post: Post.new %>
