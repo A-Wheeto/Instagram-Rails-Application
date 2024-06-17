@@ -6,3 +6,5 @@ import "filepond"
 import "custom/custom"
 import "filepond-plugin-image-preview"
 import "filepond-plugin-file-validate-type"
+
+Turbo.setFormMode("optin")

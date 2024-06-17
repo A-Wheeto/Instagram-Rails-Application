@@ -46,6 +46,9 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
+  config.responder.error_status = :unprocessable_entity
+  config.responder.redirect_status = :see_other
+
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 

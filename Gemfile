@@ -33,12 +33,14 @@ gem "sassc-rails"
 
 # User authentication handling
 gem "devise"
+gem 'responders', '~> 3.1.0'
 
 #Icons
 gem "font-awesome-sass"
 
 #Active storage validation
 gem "activestorage-validator"
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
