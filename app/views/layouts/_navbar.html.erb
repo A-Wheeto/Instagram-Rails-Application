@@ -27,9 +27,9 @@
           <div class="dropdown">
             <a class="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <% if current_user && current_user.profile_pic.attached? %>
-                <%= image_tag current_user.user.profile_pic, class: "img-thumbnail rounded-circle p-0", style: "height: 24px; border: 0;" %>
+                <%= image_tag current_user.profile_pic, class: "img-thumbnail rounded-circle", style: "width: 2rem" %>
               <% else %>
-                <%= image_tag "profile_image.png", class: "img-thumbnail rounded-circle p-0", style: "height: 24px; border: 0;" %>
+                <%= image_tag 'user-pp.png', class: "img-thumbnail rounded-circle", style: "width: 2rem" %>
               <% end %>
             </a>
             </button>
