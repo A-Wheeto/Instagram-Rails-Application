@@ -1,11 +1,15 @@
-<div class="container d-flex justify-content-center align-items-center gap-5", style="min-hreight: 20rem;">
-  <%= image_tag user.profile_pic.attached? ? user.profile_pic : "user-pp.png", class: "img-thumbnail rounded-circle w-25", style: "max-width: 8rem; max-height: 8rem;" %>
+<div class="container d-flex justify-content-center align-items-center gap-5", style="min-height: 20rem;">
+
+  <%= image_tag user.profile_pic.attached? ? user.profile_pic : 'user-pp.png', class: "img-thumbnail rounded-circle w-25", style: "max-width: 8rem; max-height:8rem" %>
 
   <div class="w-75 d-flex flex-column gap-4">
     <div class="d-flex gap-3 align-items-center">
       <p class="m-0 fw-bold"><%= user.username %></p>
       <button class="btn border border-1"> Message </button>
-      <button class="btn btn-primary"> Follow </button>
+      <% unless user == current_user %>
+        <button class="btn btn-primary"> Follow </button>
+      <% end %>
+      <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-transparent border" %>
     </div>
 
     <div class="d-flex gap-5">
